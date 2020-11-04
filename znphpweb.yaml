@@ -27,17 +27,4 @@ spec: #specifications for our object
           persistentVolumeClaim:
             # PVC name you created
             claimName: znphp-pvc
----            
-apiVersion: v1
-kind: Service
-metadata:
-  name: znphp-svc
-  labels:
-    run: znphp-svc
-spec:
-  type: LoadBalancer
-  ports:
-  - port: 80
-    protocol: TCP
-  selector:
-    app: znphp
+  
